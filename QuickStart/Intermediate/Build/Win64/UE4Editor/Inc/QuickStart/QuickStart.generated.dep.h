@@ -5,6 +5,9 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
+#ifndef QUICKSTART_FloatingActor_generated_h
+	#include "FloatingActor.h"
+#endif
 #ifndef QUICKSTART_QuickStartGameMode_generated_h
 	#include "QuickStartGameMode.h"
 #endif

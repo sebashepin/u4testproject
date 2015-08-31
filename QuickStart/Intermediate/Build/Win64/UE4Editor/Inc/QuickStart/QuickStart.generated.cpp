@@ -9,17 +9,60 @@
 #include "QuickStart.generated.dep.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeQuickStart() {}
+	void AFloatingActor::StaticRegisterNativesAFloatingActor()
+	{
+	}
+	IMPLEMENT_CLASS(AFloatingActor, 2805000466);
 	void AQuickStartGameMode::StaticRegisterNativesAQuickStartGameMode()
 	{
 	}
 	IMPLEMENT_CLASS(AQuickStartGameMode, 1483352448);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
+	ENGINE_API class UClass* Z_Construct_UClass_AActor();
 	ENGINE_API class UClass* Z_Construct_UClass_AGameMode();
 
+	QUICKSTART_API class UClass* Z_Construct_UClass_AFloatingActor_NoRegister();
+	QUICKSTART_API class UClass* Z_Construct_UClass_AFloatingActor();
 	QUICKSTART_API class UClass* Z_Construct_UClass_AQuickStartGameMode_NoRegister();
 	QUICKSTART_API class UClass* Z_Construct_UClass_AQuickStartGameMode();
 	QUICKSTART_API class UPackage* Z_Construct_UPackage_QuickStart();
+	UClass* Z_Construct_UClass_AFloatingActor_NoRegister()
+	{
+		return AFloatingActor::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AFloatingActor()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_AActor();
+			Z_Construct_UPackage_QuickStart();
+			OuterClass = AFloatingActor::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_DisplacementRate = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("DisplacementRate"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(DisplacementRate, AFloatingActor), 0x0000000000000001);
+PRAGMA_POP
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("FloatingActor.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("FloatingActor.h"));
+				MetaData->SetValue(NewProp_DisplacementRate, TEXT("Category"), TEXT("FloatingActor"));
+				MetaData->SetValue(NewProp_DisplacementRate, TEXT("ModuleRelativePath"), TEXT("FloatingActor.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AFloatingActor(Z_Construct_UClass_AFloatingActor, TEXT("AFloatingActor"));
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AFloatingActor);
 	UClass* Z_Construct_UClass_AQuickStartGameMode_NoRegister()
 	{
 		return AQuickStartGameMode::StaticClass();
@@ -62,8 +105,8 @@ void EmptyLinkFunctionForGeneratedCodeQuickStart() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/QuickStart")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0xC7B92670;
-			Guid.B = 0xBB56067B;
+			Guid.A = 0x18329016;
+			Guid.B = 0xDB04BBC2;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

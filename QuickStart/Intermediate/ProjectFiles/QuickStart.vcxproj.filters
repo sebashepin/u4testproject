@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\QuickStart.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{0478328C-C3F0-457D-B471-A42905DBDC02}</UniqueIdentifier>
+			<UniqueIdentifier>{9494274D-39A4-46F8-962A-F078A1E97328}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\QuickStart.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{D59FE4F0-C55C-46C1-B44D-5CF0E523FCA9}</UniqueIdentifier>
+			<UniqueIdentifier>{14D0A00F-9F84-4A92-AFED-0C077D6EC4B8}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,8 +25,14 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\QuickStart">
-			<UniqueIdentifier>{FECB75D5-51DF-4338-8F21-C2B973E8A87B}</UniqueIdentifier>
+			<UniqueIdentifier>{844C2E95-D52E-4919-A09B-699380884D74}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\QuickStart\FloatingActor.cpp">
+			<Filter>Source\QuickStart</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\QuickStart\FloatingActor.h">
+			<Filter>Source\QuickStart</Filter>
+		</ClInclude >
 		<None Include="..\..\Source\QuickStart\QuickStart.Build.cs">
 			<Filter>Source\QuickStart</Filter>
 		</None >

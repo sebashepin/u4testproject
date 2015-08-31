@@ -50,6 +50,8 @@
 		<None Include="..\..\Config\DefaultEditor.ini" />
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
+		<ClCompile Include="..\..\Source\QuickStart\FloatingActor.cpp" />
+		<ClInclude Include="..\..\Source\QuickStart\FloatingActor.h" />
 		<None Include="..\..\Source\QuickStart\QuickStart.Build.cs" />
 		<ClCompile Include="..\..\Source\QuickStart\QuickStart.cpp" />
 		<ClInclude Include="..\..\Source\QuickStart\QuickStart.h" />
